@@ -53,15 +53,15 @@
       "code": "https://github.com/MedAmirSoltani/kDD-Anomaly-Detection"
     }
   },
-  {
-    "name": "ArtMart",
-    "desc": "A platform for purchasing art and submitting projects, using Symfony and Java.",
-    "image": "test",
-    "category": "Development",
-    "links": {
-      "code": "https://github.com/MedAmirSoltani/ArtMart"
-    }
-  },
+{
+  "name": "Battery RUL Prediction",
+  "desc": "End-to-end PHM pipeline predicting Remaining Useful Life of batteries using a stacked LSTM model, with direct applicability to AEM electrolyzer diagnostics.",
+  "image": "test",
+  "category": "Artificial Intelligence",
+  "links": {
+    "code": "https://github.com/MedAmirSoltani/battery-rul-phm"
+  }
+},
   {
     "name": "Portfolio optimization",
     "desc": "Optimized portfolios using deep learning, deployed with Django and Dash. Integrated sentiment analysis and Power BI dashboards.",
