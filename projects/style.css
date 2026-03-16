@@ -157,7 +157,6 @@ header .navbar ul li a:hover{
 
 /* work section starts */
 .work{
-  /* background: #010124; */
   background: linear-gradient(to bottom, #010136, #00003a);
   margin-top: 5rem;
 }
@@ -171,7 +170,7 @@ header .navbar ul li a:hover{
 .work .button-group{
   display: flex;
   flex-wrap: wrap;
-  gap:1rem;
+  gap: 1rem;
   margin: 2rem auto;
   width: 50%;
   justify-content: center;
@@ -198,32 +197,33 @@ header .navbar ul li a:hover{
 .work .box-container{
   display: flex;
   flex-wrap: wrap;
-  gap:1.5rem;
+  gap: 1.5rem;
   margin: 2rem;
 }
 .work .box-container .box{
-  flex:1 1 30rem;
+  flex: 1 1 30rem;
   border-radius: .5rem;
   box-shadow: 0 .7rem 1rem rgba(0,0,0,.3);
   position: relative;
-  overflow:hidden;
-  height:30rem;
+  overflow: hidden;
+  height: 30rem;
   background: #fff;
   border: none;
 }
 .work .box-container .box img{
   height: 100%;
-  width:100%;
+  width: 100%;
   object-fit: cover;
 }
 .work .box-container .box .content{
   height: 100%;
-  width:100%;
+  width: 100%;
   position: absolute;
-  top:85%; left:0;
-  background:rgba(255, 255, 255, 0.9);
+  top: 85%; left: 0;
+  background: rgba(255, 255, 255, 0.9);
   display: flex;
   flex-direction: column;
+  transition: top 0.3s ease;
 }
 .work .box-container .box .content .tag{
   display: flex;
@@ -238,7 +238,9 @@ header .navbar ul li a:hover{
 .work .box-container .box .content .tag h3{
   font-size: 2rem;
 }
-.work .box-container .box:hover .content{
+/* FIX: added .active class for touch/tap support on mobile */
+.work .box-container .box:hover .content,
+.work .box-container .box.active .content{
   top: 25%;
 }
 .work .desc {
@@ -268,18 +270,6 @@ header .navbar ul li a:hover{
 }
 .work .desc .btns .btn:hover{
   background: #310ae0f5;
-}
-
-@media screen and (max-width: 450px) {
-  .work .button-group{
-    width: 100%;
-  }
-  .work .box-container{
-    margin: 0rem;
-  }
-  .work .box-container .grid-item .box{
-    width: 95% !important;
-  }
 }
 
 /* back to home button */
@@ -319,6 +309,34 @@ header .navbar ul li a:hover{
 }
 /* work section ends */
 
+/* mobile fixes */
+@media screen and (max-width: 600px) {
+  .work .box-container {
+    margin: 1rem 0;
+    gap: 1rem;
+  }
+  .work .box-container .box {
+    flex: 1 1 100%;
+    height: 28rem;
+  }
+  /* show title bar by default on mobile so user knows it's tappable */
+  .work .box-container .box .content {
+    top: 72%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .work .button-group{
+    width: 100%;
+    gap: 0.8rem;
+  }
+  .work .box-container{
+    margin: 0;
+    gap: 1rem;
+  }
+}
+/* mobile fixes ends */
+
 /* common media queries starts*/
 @media(max-width:450px){
   html{
@@ -332,7 +350,6 @@ header .navbar ul li a:hover{
   }
 }
 /* common media queries ends*/
-
 
 /* scroll top starts */
 #scroll-top{

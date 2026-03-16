@@ -243,9 +243,11 @@ header .navbar ul li a:hover {
   font-weight: 600;
   padding: 1rem 0;
 }
+/* FIX: was position:absolute which broke mobile layout */
 .home .btn {
   margin-top: 1rem;
-  position: absolute;
+  position: relative;
+  display: inline-block;
   line-height: 0;
   padding: 1.6rem 3rem;
   border-radius: 4em;
@@ -274,7 +276,7 @@ header .navbar ul li a:hover {
 /* social icons start */
 .socials {
   position: relative;
-  margin-top: 9rem;
+  margin-top: 5rem;
 }
 .socials .social-icons {
   padding-left: 0;
@@ -323,19 +325,27 @@ header .navbar ul li a:hover {
 }
 /* social icons end */
 
-
-
-
 /* hero media queries starts*/
+@media (max-width: 768px) {
+  .home .content h2 {
+    font-size: 4rem;
+  }
+  .home .content h2 span {
+    font-size: 4rem;
+  }
+}
 @media (max-width: 450px) {
   .home .btn {
-    margin: 4rem 0;
+    margin: 2rem 0;
   }
   .socials {
-    margin-top: 12rem;
+    margin-top: 3rem;
   }
   .home .image img {
-    margin-left: 20px;
+    width: 90%;
+    margin-left: 0;
+    display: block;
+    margin: 0 auto;
   }
   .home .content p {
     font-size: 2.2rem;
@@ -343,15 +353,14 @@ header .navbar ul li a:hover {
   .home .content p span {
     font-size: 2.2rem;
   }
+  .home .content h2 {
+    font-size: 3.5rem;
+  }
+  .home .content h2 span {
+    font-size: 3.5rem;
+  }
 }
 /* hero media queries ends*/
-
-
-
-
-
-
-
 
 /* about section starts */
 .about {
@@ -454,7 +463,7 @@ header .navbar ul li a:hover {
   }
   .about .row {
     padding: 0.5rem;
-    margin-bottom: 7rem;
+    margin-bottom: 3rem;
   }
   .about .row .content {
     padding: 1rem;
@@ -521,20 +530,26 @@ header .navbar ul li a:hover {
   margin-left: 0.5rem;
 }
 /* skills media queries starts*/
+@media screen and (max-width: 900px) {
+  .skills .container .row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 @media screen and (max-width: 600px) {
   .skills .container {
     padding: 0;
     margin: 0;
-  }
-  .skills .container .row {
-    grid-template-columns: repeat(2, 1fr);
-    margin: 1rem;
-    padding: 2rem 0.2rem 2rem 0.2rem;
-    gap: 1rem;
-  }
-  .skills .container {
     margin-top: 5px;
     width: 100%;
+  }
+  .skills .container .row {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1rem;
+    padding: 1rem 0.2rem;
+    gap: 0.8rem;
+  }
+  .skills .container .bar .info span {
+    font-size: 1.4rem;
   }
 }
 /* skills media queries ends*/
@@ -624,7 +639,7 @@ header .navbar ul li a:hover {
   }
   .education .box-container .box .image {
     width: 100%;
-    height: 25rem;
+    height: 20rem;
   }
   .education .box-container .box img {
     width: 100%;
@@ -636,6 +651,9 @@ header .navbar ul li a:hover {
     padding: 1rem;
     flex-wrap: wrap;
     flex: 0;
+  }
+  .education .box-container .box .content h3 {
+    font-size: 1.8rem;
   }
   .education .btns {
     margin-top: 2rem;
@@ -649,7 +667,6 @@ header .navbar ul li a:hover {
 
 /* work section starts */
 .work {
-  /* background: #010124; */
   background: linear-gradient(to bottom, #000031, #00002c);
 }
 .work h2 {
@@ -687,6 +704,7 @@ header .navbar ul li a:hover {
   background: rgba(255, 255, 255, 0.9);
   display: flex;
   flex-direction: column;
+  transition: top 0.3s ease;
 }
 .work .box-container .box .content .tag {
   display: flex;
@@ -701,7 +719,8 @@ header .navbar ul li a:hover {
 .work .box-container .box .content .tag h3 {
   font-size: 2rem;
 }
-.work .box-container .box:hover .content {
+.work .box-container .box:hover .content,
+.work .box-container .box.active .content {
   top: 25%;
 }
 .work .desc {
@@ -764,6 +783,20 @@ header .navbar ul li a:hover {
 }
 .work .viewall .btn:hover i {
   transform: translateX(5px);
+}
+/* work mobile fixes */
+@media screen and (max-width: 600px) {
+  .work .box-container {
+    margin: 1rem 0;
+    gap: 1rem;
+  }
+  .work .box-container .box {
+    flex: 1 1 100%;
+    height: 28rem;
+  }
+  .work .box-container .box .content {
+    top: 72%;
+  }
 }
 /* work section ends */
 
@@ -865,7 +898,6 @@ header .navbar ul li a:hover {
   font-size: 1.2rem;
 }
 
-
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
   .experience {
@@ -900,12 +932,9 @@ header .navbar ul li a:hover {
   .experience .right {
     left: 0%;
   }
-
 }
 /* experience media queries ends */
 /* experience section ends */
-
-
 
 /* footer section starts */
 .footer {
