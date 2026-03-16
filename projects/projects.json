@@ -1,7 +1,43 @@
 [
   {
+    "name": "Four Days That Shook the World",
+    "desc": "NLP analysis of 4.57M World Cup tweets — multilingual sentiment, topic modeling with BERTopic, viral moment detection, and LLM narration via Groq.",
+    "image": "netflix",
+    "category": "Artificial Intelligence",
+    "links": {
+      "code": "https://github.com/MedAmirSoltani/world-cup-nlp-2018"
+    }
+  },
+  {
+    "name": "EmotionLens™",
+    "desc": "Facial emotion recognition using VGG19 trained on FER2013, deployed on HuggingFace Hub with real-time webcam inference via Streamlit.",
+    "image": "emotion",
+    "category": "Artificial Intelligence",
+    "links": {
+      "code": "https://github.com/MedAmirSoltani/emotion-detection"
+    }
+  },
+  {
+    "name": "ScoutVision AI",
+    "desc": "AI football scouting tool — player rating & market value prediction with Random Forest and XGBoost, plus an LLM-powered scout assistant via LLaMA and Flask.",
+    "image": "scout",
+    "category": "Artificial Intelligence",
+    "links": {
+      "code": "https://github.com/MedAmirSoltani/scoutvision-ai"
+    }
+  },
+  {
+    "name": "Network Traffic Classifier",
+    "desc": "Network intrusion detection using MLP with PCA-based dimensionality reduction, deployed as an interactive Streamlit dashboard.",
+    "image": "network",
+    "category": "Artificial Intelligence",
+    "links": {
+      "code": "https://github.com/MedAmirSoltani/network-traffic-classifier"
+    }
+  },
+  {
     "name": "Apple Stock Prediction",
-    "desc": "Used SARIMA in R to forecast Apple’s stock price trend.",
+    "desc": "Used SARIMA in R to forecast Apple's stock price trend.",
     "image": "apple",
     "category": "Artificial Intelligence",
     "links": {
@@ -18,24 +54,6 @@
     }
   },
   {
-    "name": "Churn Detection",
-    "desc": "Created a model to detect customer churn using advanced feature engineering.",
-    "image": "churn",
-    "category": "Artificial Intelligence",
-    "links": {
-      "code": "https://github.com/MedAmirSoltani/churn-detection"
-    }
-  },
-  {
-    "name": "Rename Shell Script",
-    "desc": "A bash script for renaming and managing files in Linux.",
-    "image": "bash",
-    "category": "Development",
-    "links": {
-      "code": "https://github.com/MedAmirSoltani/Scripting"
-    }
-  },
-  {
     "name": "ArtMart",
     "desc": "A platform for purchasing art and submitting projects, using Symfony and Java.",
     "image": "test",
@@ -45,39 +63,21 @@
     }
   },
   {
-    "name": "Hogwart University",
-    "desc": "An online learning platform designed for students during the pandemic.",
-    "image": "hogwart",
-    "category": "Development",
-    "links": {
-      "code": "https://github.com/MedAmirSoltani/Web"
-    }
-  },
-  {
-    "name": "NexTech",
-    "desc": "A shopping app for tech products with customer reviews.",
-    "image": "nextech",
-    "category": "Development",
-    "links": {
-      "code": "https://github.com/MedAmirSoltani/smart_tech_store_2A11"
-    }
-  },
-  {
-    "name": "Veneficus",
-    "desc": "A 2D game developed in C using SDL on Linux/Ubuntu.",
-    "image": "vene",
-    "category": "Development",
-    "links": {
-      "code": "#"
-    }
-  },
-  {
-    "name": "Intelligent Trading Agent",
+    "name": "Portfolio optimization",
     "desc": "Optimized portfolios using deep learning, deployed with Django and Dash. Integrated sentiment analysis and Power BI dashboards.",
-    "image": "trading",
+    "image": "portfolio",
     "category": "Artificial Intelligence",
     "links": {
       "code": "https://github.com/MedAmirSoltani/trading-agent"
+    }
+  },
+    {
+    "name": "Intelligent Trading Agent",
+    "desc": "GARCH vs XGBoost on 15-min high-frequency Forex data with MT5 integration. Final year project — 19/20.",
+    "image": "trading",
+    "category": "Artificial Intelligence",
+    "links": {
+      "code": "https://github.com/MedAmirSoltani/Volatility-Capstone"
     }
   }
 ]
